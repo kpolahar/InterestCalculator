@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<DataSet>
+    <CardTypes>
+        <CardType>
+            <Name>Discover</Name>
+            <InterestRate>.01</InterestRate>
+        </CardType>
+        <CardType>
+            <Name>MasterCard</Name>
+            <InterestRate>.05</InterestRate>
+        </CardType>
+        <CardType>
+            <Name>Visa</Name>
+            <InterestRate>.10</InterestRate>
+        </CardType>
+    </CardTypes>
+</DataSet>
