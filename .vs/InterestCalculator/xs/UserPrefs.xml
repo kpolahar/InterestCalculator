@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{7217F5BD-9A16-477C-825B-D91117E62208}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="InterestCalculator/Data/InterestData.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="InterestCalculatorTests/AssignedTests.cs">
     <Files>
       <File FileName="InterestCalculator/Data/InterestData.cs" Line="37" Column="101" />
       <File FileName="InterestCalculatorTests/DataTests/InterestDataTest.cs" Line="45" Column="28" />
-      <File FileName="InterestCalculator/Models/Person.cs" Line="24" Column="2" />
-      <File FileName="InterestCalculator/Models/Wallet.cs" Line="11" Column="32" />
-      <File FileName="InterestCalculator/Models/Card.cs" Line="32" Column="25" />
-      <File FileName="InterestCalculatorTests/ModelsTests/CardTests.cs" Line="68" Column="88" />
-      <File FileName="InterestCalculatorTests/ModelsTests/WalletTests.cs" Line="21" Column="13" />
-      <File FileName="InterestCalculatorTests/ModelsTests/PersonTests.cs" Line="51" Column="13" />
+      <File FileName="InterestCalculator/Models/Person.cs" Line="25" Column="1" />
+      <File FileName="InterestCalculator/Models/Wallet.cs" Line="15" Column="10" />
+      <File FileName="InterestCalculator/Models/Card.cs" Line="42" Column="10" />
+      <File FileName="InterestCalculatorTests/ModelsTests/CardTests.cs" Line="106" Column="47" />
+      <File FileName="InterestCalculatorTests/ModelsTests/WalletTests.cs" Line="82" Column="65" />
+      <File FileName="InterestCalculatorTests/ModelsTests/PersonTests.cs" Line="133" Column="2" />
       <File FileName="InterestCalculator/Program.cs" Line="10" Column="1" />
       <File FileName="InterestCalculator/Data/InterestData.xml" Line="3" Column="12" />
+      <File FileName="InterestCalculatorTests/AssignedTests.cs" Line="6" Column="46" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
@@ -23,10 +24,10 @@
                 </Node>
                 <Node name="ModelsTests" expanded="True">
                   <Node name="CardTest" expanded="True" />
-                  <Node name="PersonTest" expanded="True" />
-                  <Node name="WalletTest" expanded="True">
-                    <Node name="testConstructor_CardsIsNotNull" selected="True" />
+                  <Node name="PersonTest" expanded="True">
+                    <Node name="testCalculateBalanceWithInterest_BalanceCalculatedCorrectly" selected="True" />
                   </Node>
+                  <Node name="WalletTest" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -37,7 +38,9 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/kpolahar/Docs/Dev/Freelance/Clearent/InterestCalculator/InterestCalculator/Models/Person.cs" relfile="InterestCalculator/Models/Person.cs" line="25" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.InterestCalculator PreferredExecutionTarget="MonoDevelop.Default" />

@@ -6,4 +6,25 @@ The coding challenge focuses in particular on test-driven development (TDD), tho
 
 # To Run
 
-This project is not yet complete. Instructions to run will be included once there is actually a project to be run. ^_^
+### Prerequisites
+
+Visual Studio 2017 (This program was written on my Macbook Pro, which runs 2017 Community)
+If you do not already have Visual Studio 2017 installed, installation links and instructions can be found [here](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio).
+
+### Running the Project
+
+ - Open your command prompt or terminal and navigate into the directory where you would like to clone the InterestCalculator repository
+ - Run the following commands
+ - git clone https://github.com/kpolahar/InterestCalculator.git
+ - Open Visual Studio 2017
+ - File -> Open -> [Directory where you put the InterestCalculator repository] -> InterestCalculator.sln
+
+The focus of this project is on unit testing, so there isn't really a front end, even though this is an MVC project (because, theoretically, in my magical imaginary future free time, I'd like to make a front end for it).
+
+Tests created for normal unit testing purposes follow the same folder structure of the InterestCalculator project. Tests created for the purpose of meeting the direct requirements of this coding challenge's assignment reside within a single file, 'AssignedTests.cs'. Each testing scenario has its own class wrapper within this file, to help with clarity. Variables needed for these tests were initialized within constructors for these classes and used by various test methods in these classes. All constructors and methods were tested prior to the construction of this 'AssignedTests.cs' file with individual unit tests, which reside in the remainder of the InterestCalculatorTests project.
+
+
+Please feel free to email me at *kpolahar@gmail.com* if you have any questions! ^_^
+
+Thanks,
+Kate

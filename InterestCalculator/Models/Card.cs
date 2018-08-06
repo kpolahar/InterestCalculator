@@ -29,6 +29,18 @@ namespace InterestCalculator.Models
                 this.cardType = cardTypeLookup;
         }
 
+        public decimal CalculateInterest()
+        {
+            decimal result = 0;
+            decimal interestRate = 0;
+
+            bool parsed = decimal.TryParse(this.cardType.InterestRate, out interestRate);
+            if (parsed)
+                result = (this.balance * interestRate);
+
+            return result;
+        }
+
         public decimal CalculateBalanceWithInterest()
         {
             decimal result = 0;

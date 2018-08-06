@@ -54,6 +54,31 @@ namespace InterestCalculatorTests.ModelsTests
         ///   Test
         ///     - When provided with "Discover" cardTypeName parameter,
         ///       CalculateBalanceWithInterest method calculates the
+        ///       correct expected interest for the card with one month's
+        ///       interest at the rate specified for a "Discover" card
+        ///       by the dataSet of CardTypes provided from InterestData 
+        /// </summary>
+        [Fact]
+        public void testCalculateInterest_Discover_InterestCalculatedCorrectly()
+        {
+            // Attempt to construct new InterestData
+            InterestData interestData = new InterestData();
+
+            // Attempt to construct new Card
+            Card card = new Card("Test Test", "0000 1111 2222 3333", "0101", "000", 100, "Discover");
+
+            // Attempt to calculate the interest of the Card
+            decimal interest = card.CalculateInterest();
+            decimal expectedInterest = 1;
+
+            // interest should be equal to expectedInterest
+            Assert.Equal(interest, expectedInterest);
+        }
+
+        /// <summary>
+        ///   Test
+        ///     - When provided with "Discover" cardTypeName parameter,
+        ///       CalculateBalanceWithInterest method calculates the
         ///       correct expected balance for the card with one month's
         ///       interest at the rate specified for a "Discover" card
         ///       by the dataSet of CardTypes provided from InterestData 
