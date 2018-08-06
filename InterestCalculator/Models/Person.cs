@@ -15,9 +15,13 @@ namespace InterestCalculator.Models
             this.wallets = wallets;
         }
 
-        public decimal calculateBalanceWithInterest()
+        public decimal CalculateBalanceWithInterest()
         {
             decimal result = 0;
+
+            foreach (Wallet wallet in this.wallets)
+                result += wallet.CalculateBalanceWithInterest();
+
             return result;
         }
     }

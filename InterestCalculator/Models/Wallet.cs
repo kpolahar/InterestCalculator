@@ -11,9 +11,13 @@ namespace InterestCalculator.Models
             this.cards = cards;
         }
 
-        public decimal calculateBalanceWithInterest()
+        public decimal CalculateBalanceWithInterest()
         {
             decimal result = 0;
+
+            foreach (Card card in this.cards)
+                result += card.CalculateBalanceWithInterest();
+
             return result;
         }
     }

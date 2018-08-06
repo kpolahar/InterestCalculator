@@ -55,5 +55,38 @@ namespace InterestCalculatorTests.ModelsTests
         }
 
         #endregion ConstructorTests
+
+        #region MethodTests
+
+        /// <summary>
+        ///   Test
+        ///     - When provided with two Cards of different CardTypes,
+        ///       CalculateBalanceWithInterest correctly calculates
+        /// </summary>
+        [Fact]
+        public void testCalculateBalanceWithInterest_BalanceCalculatedCorrectly()
+        {
+            // Attempt to construct new InterestData
+            InterestData interestData = new InterestData();
+
+            // Construct a set of Cards to put in the Wallet
+            List<Card> cards = new List<Card>();
+            Card card1 = new Card("Test Test", "0000 1111 2222 3333", "0101", "000", 300, "Visa");
+            Card card2 = new Card("Test Test", "0000 1111 2222 3333", "0101", "000", 250, "MasterCard");
+            cards.Add(card1);
+            cards.Add(card2);
+
+            // Attempt to construct new Wallet
+            Wallet wallet = new Wallet(cards);
+
+            // Attempt to calculate the current balance of the Wallet, with interest
+            decimal balance = wallet.CalculateBalanceWithInterest();
+            decimal expectedBalance = (decimal)592.5;
+
+            // balance should be equal to expectedBalance
+            Assert.Equal(balance, expectedBalance);
+        }
+
+        #endregion MethodTests
     }
 }
