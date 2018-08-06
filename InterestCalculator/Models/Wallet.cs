@@ -8,7 +8,7 @@ namespace InterestCalculator.Models
 
         public Wallet(List<Card> cards)
         {
-            
+            this.cards = cards;
         }
 
         public decimal calculateBalanceWithInterest()

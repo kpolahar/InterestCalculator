@@ -1,4 +1,6 @@
-﻿using static InterestCalculator.Data.InterestData;
+﻿using InterestCalculator.Data;
+using System.Linq;
+using static InterestCalculator.Data.InterestData;
 
 namespace InterestCalculator.Models
 {
@@ -11,9 +13,20 @@ namespace InterestCalculator.Models
         public decimal balance { get; set; }
         public CardType cardType { get; set; }
 
-        public Card(string cardHolderName, string cardNumber, string expirationDate, string securityCode, decimal balance, CardType cardType)
+        public Card(string cardHolderName, string cardNumber, string expirationDate, string securityCode, decimal balance, string cardTypeName)
         {
-            
+            this.cardHolderName = cardHolderName;
+            this.cardNumber = cardNumber;
+            this.expirationDate = expirationDate;
+            this.securityCode = securityCode;
+            this.balance = balance;
+
+            // Use InterestData method GetCardType to get the correct CardType to assign to this Card
+            CardType cardTypeLookup = GetCardType(cardTypeName);
+
+            // If a valid CardType is found for the provided cardTypeName, set the cardType for this Card
+            if (cardTypeLookup != null)
+                this.cardType = cardTypeLookup;
         }
 
         public decimal calculateBalanceWithInterest()

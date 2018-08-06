@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -8,7 +9,7 @@ namespace InterestCalculator.Data
 {
     public class InterestData
     {
-        public DataSet dataSet { get; set; }
+        public static DataSet dataSet { get; set; }
 
         public InterestData()
         {
@@ -19,15 +20,21 @@ namespace InterestCalculator.Data
                 XmlSerializer xmlData = new XmlSerializer(typeof(DataSet));
                 XmlTextReader xmlReader = new XmlTextReader(new StringReader(xml));
 
-                this.dataSet = xmlData.Deserialize(xmlReader) as DataSet;
+                dataSet = xmlData.Deserialize(xmlReader) as DataSet;
 
-                if ((this.dataSet == null) || (this.dataSet.CardTypes == null) || (this.dataSet.CardTypes.Count == 0))
+                if ((dataSet == null) || (dataSet.CardTypes == null) || (dataSet.CardTypes.Count == 0))
                     throw new Exception("An error occurred while deserializing card type data.");
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public static CardType GetCardType(string cardTypeName)
+        {
+            // Attempt to locate a CardType on file in the set of InterestData CardTypes for the provided cardTypeName
+            return (CardType)dataSet.CardTypes.Where(k => (k.Name == cardTypeName)).FirstOrDefault();
         }
 
         [Serializable, XmlRoot(ElementName = "DataSet")]

@@ -10,7 +10,9 @@ namespace InterestCalculator.Models
 
         public Person(string firstName, string lastName, List<Wallet> wallets)
         {
-            
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.wallets = wallets;
         }
 
         public decimal calculateBalanceWithInterest()

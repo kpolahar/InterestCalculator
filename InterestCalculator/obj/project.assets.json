@@ -11496,7 +11496,9 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "System.Linq >= 4.3.0",
+      "System.Linq.Expressions >= 4.3.0"
     ]
   },
   "packageFolders": {
@@ -11548,6 +11550,14 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "2.1.1"
+          },
+          "System.Linq": {
+            "target": "Package",
+            "version": "4.3.0"
+          },
+          "System.Linq.Expressions": {
+            "target": "Package",
+            "version": "4.3.0"
           }
         },
         "imports": [
